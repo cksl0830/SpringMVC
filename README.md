@@ -36,5 +36,15 @@ v4 프론트 컨트롤러까지는 한가지 방식의 컨트롤러 인터페이
 
 ##### 5. 스프링 MVC
 
+- 비교 
+>FrontController -> DispatcherServlet   
+handlerMappingMap -> HandlerMapping   
+MyHandlerAdapter -> HandlerAdapter   
+ModelView -> ModelAndView   
+viewResolver -> ViewResolver  
+MyView -> View    
+
+- 구조   
+![image](https://user-images.githubusercontent.com/60590737/160222701-b80df947-df42-4455-923f-c1f0af8979c1.png)
 
 
