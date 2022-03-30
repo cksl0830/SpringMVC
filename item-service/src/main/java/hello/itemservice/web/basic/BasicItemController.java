@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/basic/items")
-@RequiredArgsConstructor
+@RequiredArgsConstructor //생성자 주입
 public class BasicItemController {
 
     private final ItemRepository itemRepository;
@@ -107,7 +107,7 @@ public class BasicItemController {
     /**
      * 테스트용 데이터 추가
      */
-    @PostConstruct
+    @PostConstruct //의존성 주입이 이루어진 후 초기화 수행
     public void init() {
         itemRepository.save(new Item("itemA", 10000, 10));
         itemRepository.save(new Item("itemB", 20000, 20));
