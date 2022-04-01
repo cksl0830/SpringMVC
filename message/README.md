@@ -6,3 +6,7 @@
 > 2. 국제화   
 > messages_en.properties 에 영어 메시지 저장하면   
 > -> 스프링이 알아서 Locale 적용  
+
+
+* application.properties 에 어떤 파일명 쓸지만 설정해주면 된다.  
+**->  spring.messages.basename=messages,config.i18n.messages**
