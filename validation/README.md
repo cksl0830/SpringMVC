@@ -43,4 +43,10 @@ bindingResult.reject("totalPriceMin", new Object[]{10000, resultPrice}, null); /
 
 - v6 : **@InitBinder** 통해 검증 확인하고 **@Validated** 적용 
 
+---------------------------------
 
+- V3 컨트롤러 추가
+1. 아이템 도메인에 @NotNull 과 같은 어노테이션을 추가해주므로써 @Validated 가 알아서 검증 
+
+
+ 
