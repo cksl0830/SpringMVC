@@ -38,9 +38,9 @@ bindingResult.reject("totalPriceMin", new Object[]{10000, resultPrice}, null); /
 
 #### ✅ validation 분리 
 
-- v5 : ItemValidator 클래스 만들고 implements Validator 을 통해 에러메시지 부분 분리!   
+- v5 : **ItemValidator 클래스 만들고 implements Validator 을 통해 에러메시지 부분 분리!**   
 -> 컨트롤러 부분에 생성자 만들고 컴포넌트스캔해서 처리 : 로직이 깔끔해짐 
 
-- v6 : @InitBinder 통해 검증 확인하고 @Validated 적용 
+- v6 : **@InitBinder** 통해 검증 확인하고 **@Validated** 적용 
 
 
