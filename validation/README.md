@@ -45,8 +45,32 @@ bindingResult.reject("totalPriceMin", new Object[]{10000, resultPrice}, null); /
 
 ---------------------------------
 
-- V3 컨트롤러 추가
-1. 아이템 도메인에 @NotNull 과 같은 어노테이션을 추가해주므로써 @Validated 가 알아서 검증 
+#### Bean validation  
+
+- V3 컨트롤러     
+1. 아이템 도메인에 @NotNull 과 같은 어노테이션을 추가해주므로써 @Validated 가 알아서 검증   
+2. groups 를 통해 적용할 부분 인터페이스 등록     
+
+-> 코드 복잡도가 올라감 // 살무에서 groups 사용 잘 안함   
+
+
+- V4 컨트롤러   
+-> 등록, 수정 폼 분리하여 폼 객체 바인딩  
+
+- V5 컨트롤러   
+1. **@RestController , @RequestBody** 사용  
+2. JSON을 객체로 생성하는 것을 실패하면 검증까지도 못감   
+
+** API 3가지 경우    
+```
+성공 요청: 성공
+실패 요청: JSON을 객체로 생성하는 것 자체가 실패함
+검증 오류 요청: JSON을 객체로 생성하는 것은 성공했고, 검증에서 실패함
+```
+
+
+
+
 
 
  
