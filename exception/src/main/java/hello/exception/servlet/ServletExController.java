@@ -1,5 +1,5 @@
 package hello.exception.servlet;
-
+// 스프링 부트 에러페이지 사용하면 얘만 필요!
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
