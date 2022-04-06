@@ -19,14 +19,13 @@ public class ConversionServiceTest {
         conversionService.addConverter(new IpPortToStringConverter());
 
         //사용
-        assertThat(conversionService.convert("10", Integer.class)).isEqualTo(10);
-        assertThat(conversionService.convert(10, String.class)).isEqualTo("10");
-
-        IpPort ipPort = conversionService.convert("127.0.0.1:8080", IpPort.class);
+        assertThat(conversionService.convert("10", Integer.class)).isEqualTo(10); //문자에서 숫자로
+        assertThat(conversionService.convert(10, String.class)).isEqualTo("10"); //숫자에서 문자로
+        IpPort ipPort = conversionService.convert("127.0.0.1:8080", IpPort.class); //문자에서 객체로
         assertThat(ipPort).isEqualTo(new IpPort("127.0.0.1", 8080));
 
         String ipPortString = conversionService.convert(new IpPort("127.0.0.1", 8080), String.class);
-        assertThat(ipPortString).isEqualTo("127.0.0.1:8080");
+        assertThat(ipPortString).isEqualTo("127.0.0.1:8080"); //객체에서 문자로
 
     }
 }
